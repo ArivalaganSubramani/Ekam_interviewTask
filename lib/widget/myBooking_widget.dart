@@ -38,9 +38,9 @@ class _BookingWidgetState extends State<BookingWidget> {
                     width: 70,
                     decoration: BoxDecoration(
                       border: Border.all(width: 1),
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Image.asset('assets/${widget.mybookings.doctorName}.jpg'),
+                    child: Image.asset('assets/${widget.mybookings.doctorName}.jpg', width: 65,height: 70,),
                   ),
                   Column(
                     children: [

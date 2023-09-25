@@ -33,7 +33,6 @@ class _ReviewSummaryState extends State<ReviewSummary> {
               SizedBox(height: 50),
               SizedBox(
                   height: 150,
-                  width: 150,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 8.0),
                       child: Row(
@@ -43,9 +42,9 @@ class _ReviewSummaryState extends State<ReviewSummary> {
                               ClipOval(child: Image.network(widget.doctorDetails!.image),
                               ),
                               Positioned(
-                                  right: -3,
+                                  right: -5,
                                   bottom: 5,
-                                  child: Icon(Icons.verified, color: Colors.blueAccent,)),
+                                  child: Icon(Icons.verified, color: Colors.blueAccent,size: 50,)),
                             ],
                           ),
                           SizedBox(width: 20),
@@ -68,8 +67,9 @@ class _ReviewSummaryState extends State<ReviewSummary> {
 
                 ),
 
-              SizedBox(height: 50),
+              SizedBox(height: 20),
               Divider(),
+              SizedBox(height: 15,),
               Row(
                 children: [
                   SizedBox(width: 20),
@@ -80,8 +80,9 @@ class _ReviewSummaryState extends State<ReviewSummary> {
                   SizedBox(width: 10),
                   Expanded(
                       flex: 3,
-                      child: Text(widget.selectedValues + widget.selectedKey),
-                  ),
+                      child: Text(widget.selectedValues + '  |  ' + widget.selectedKey,textAlign: TextAlign.end,)),
+                  SizedBox(width: 20),
+
                 ],
               ),
               Row(
@@ -94,7 +95,9 @@ class _ReviewSummaryState extends State<ReviewSummary> {
                   SizedBox(width: 10),
                   Expanded(
                       flex: 3,
-                      child: Text(widget.selectedPackage)),
+                      child: Text(widget.selectedPackage,textAlign: TextAlign.end,)),
+                  SizedBox(width: 20),
+
                 ],
               ),
               Row(
@@ -107,7 +110,9 @@ class _ReviewSummaryState extends State<ReviewSummary> {
                   SizedBox(width: 10),
                   Expanded(
                       flex: 3,
-                      child: Text(widget.dropdownValue)),
+                      child: Text(widget.dropdownValue,textAlign: TextAlign.end,)),
+                  SizedBox(width: 20),
+
                 ],
               ),
               Row(
@@ -120,10 +125,11 @@ class _ReviewSummaryState extends State<ReviewSummary> {
                   SizedBox(width: 10),
                   Expanded(
                       flex: 3,
-                      child: Text("Self")),
+                      child: Text("Self", textAlign: TextAlign.end,)),
+                  SizedBox(width: 20),
                 ],
               ),
-              SizedBox(height: 100),
+              SizedBox(height: 20),
               Divider(),
               SizedBox(height: 70),
               Center(
